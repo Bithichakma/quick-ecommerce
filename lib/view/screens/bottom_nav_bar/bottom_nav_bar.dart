@@ -1,19 +1,19 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:quick_ecommerce/view/screens/dashboard/account_screen.dart';
-import 'package:quick_ecommerce/view/screens/dashboard/cart_screen.dart';
-import 'package:quick_ecommerce/view/screens/dashboard/home_screen.dart';
-import 'package:quick_ecommerce/view/screens/dashboard/messages_screen.dart';
+import 'package:quick_ecommerce/view/screens/bottom_nav_bar/account/account_screen.dart';
+import 'package:quick_ecommerce/view/screens/bottom_nav_bar/cart/cart_screen.dart';
+import 'package:quick_ecommerce/view/screens/bottom_nav_bar/home/home_screen.dart';
+import 'package:quick_ecommerce/view/screens/bottom_nav_bar/messages/messages_screen.dart';
 
-class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({super.key});
+class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({super.key});
 
   @override
-  State<DashboardScreen> createState() => _DashboardScreenState();
+  State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class _BottomNavBarState extends State<BottomNavBar> {
   int selectedIndex = 0;
   onBottomIconTap(int index) {
     selectedIndex = index;
