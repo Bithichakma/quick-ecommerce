@@ -35,9 +35,34 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 10,
             ),
             HomeBannerSection(),
+            DealsSection()
           ],
         ),
       ),
+    );
+  }
+}
+
+class DealsSection extends StatelessWidget {
+  const DealsSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text("New Deals Everyday")),
+            Container(color: 
+            Colors.blue,
+            height: 100,
+            width: 200,
+            )
+          ],
+        ),
     );
   }
 }
