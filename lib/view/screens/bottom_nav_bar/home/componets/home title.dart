@@ -7,6 +7,9 @@ class HomeTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
                 alignment: Alignment.centerLeft,
-                child: Text("New Deals Everyday"));
+                child: Text(
+                  title,
+                  style: TextStyle(fontSize: 18),
+                ));
   }
 }

@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:quick_ecommerce/view/screens/bottom_nav_bar/home/componets/home%20title.dart';
 import 'package:quick_ecommerce/view/screens/bottom_nav_bar/home/componets/home_app_bar.dart';
 import 'package:quick_ecommerce/view/screens/bottom_nav_bar/home/componets/home_banner_section.dart';
 
@@ -49,18 +50,56 @@ class DealsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10),
+      padding: const EdgeInsets.only(left: 10,right: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text("New Deals Everyday")),
+              HomeTitle(title: "New Deals Everyday"),
+            Container(
+              padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(10)
+              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                Text(
+                  "7% OFF",
+                  style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue),
+                  ),
+                Text(
+                  "Min. spend ৳ 3990 ",
+                  style: TextStyle(fontWeight: FontWeight.w300,color: Colors.blue),
+                  ),
+              ],
+              ),
+
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                Text(
+                  "Quick Voucher",
+                  style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue),
+                  ),
+                Text(
+                  "10-30-2024 to 11-06-2024",
+                  style: TextStyle(fontWeight: FontWeight.w300,color: Colors.blue),
+                  ),
+              ],
+              ),
+            ],),
+            ),
+            SizedBox(height: 10,),
+              HomeTitle(title: "Best Deals"),
             Container(color: 
-            Colors.blue,
+            Colors.deepPurple,
             height: 100,
             width: 200,
-            )
+            ),
           ],
         ),
     );
